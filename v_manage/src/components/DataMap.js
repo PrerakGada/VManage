@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function DataMap() {
-  return (
-    <div>DataMap</div>
-  )
+  return <div>DataMap</div>;
 }
 
-export default DataMap
+export default DataMap;

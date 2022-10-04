@@ -3,47 +3,97 @@ import React from "react";
 const Dashboard = () => {
   return (
     <div>
-      
       <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Slides With captions</h4>
-                                <div class="bootstrap-carousel">
-                                    <div data-ride="carousel" class="carousel slide" id="carouselExampleCaptions">
-                                        <ol class="carousel-indicators">
-                                            <li class="" data-slide-to="0" data-target="#carouselExampleCaptions"></li>
-                                            <li data-slide-to="1" data-target="#carouselExampleCaptions" class=""></li>
-                                            <li data-slide-to="2" data-target="#carouselExampleCaptions" class="active"></li>
-                                        </ol>
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item">
-                                                <img class="d-block w-100" src="images/big/img5.jpg" alt="">
-                                                <div class="carousel-caption d-none d-md-block">
-                                                    <h5>First slide label</h5>
-                                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img alt="" class="d-block w-100" src="images/big/img6.jpg">
-                                                <div class="carousel-caption d-none d-md-block">
-                                                    <h5>Second slide label</h5>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item active">
-                                                <img alt="" class="d-block w-100" src="images/big/img5.jpg">
-                                                <div class="carousel-caption d-none d-md-block">
-                                                    <h5>Third slide label</h5>
-                                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                                </div>
-                                            </div>
-                                        </div><a data-slide="prev" href="#carouselExampleCaptions" class="carousel-control-prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span> </a><a data-slide="next" href="#carouselExampleCaptions"
-                                            class="carousel-control-next"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Slides With captions</h4>
+            <div class="bootstrap-carousel">
+              <div
+                data-ride="carousel"
+                class="carousel slide"
+                id="carouselExampleCaptions"
+              >
+                <ol class="carousel-indicators">
+                  <li
+                    class=""
+                    data-slide-to="0"
+                    data-target="#carouselExampleCaptions"
+                  ></li>
+                  <li
+                    data-slide-to="1"
+                    data-target="#carouselExampleCaptions"
+                    class=""
+                  ></li>
+                  <li
+                    data-slide-to="2"
+                    data-target="#carouselExampleCaptions"
+                    class="active"
+                  ></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-100"
+                      src="images/big/img5.jpg"
+                      alt=""
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>
+                        Nulla vitae elit libero, a pharetra augue mollis
+                        interdum.
+                      </p>
                     </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      alt=""
+                      class="d-block w-100"
+                      src="images/big/img6.jpg"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Second slide label</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item active">
+                    <img
+                      alt=""
+                      class="d-block w-100"
+                      src="images/big/img5.jpg"
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>
+                        Praesent commodo cursus magna, vel scelerisque nisl
+                        consectetur.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  data-slide="prev"
+                  href="#carouselExampleCaptions"
+                  class="carousel-control-prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>{" "}
+                  <span class="sr-only">Previous</span>{" "}
+                </a>
+                <a
+                  data-slide="next"
+                  href="#carouselExampleCaptions"
+                  class="carousel-control-next"
+                >
+                  <span class="carousel-control-next-icon"></span>{" "}
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="row">
         <div className="col-lg-3 col-sm-6">
           <div className="card gradient-1">
