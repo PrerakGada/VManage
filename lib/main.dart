@@ -55,7 +55,7 @@ class _MyAppState extends State<MyApp> {
       child: MaterialApp(
         theme: light_theme(),
         darkTheme: dark_theme(),
-        themeMode: ThemeMode.light,
+        themeMode: ThemeMode.dark,
         debugShowCheckedModeBanner: false,
         home: const Wrapper(),
         navigatorKey: get_it_instance_const<NavigationService>().navigatorKey,

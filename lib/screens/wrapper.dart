@@ -1,4 +1,5 @@
 
+import 'package:eos_hackover3/routes.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -29,9 +30,9 @@ class WrapperState extends State<Wrapper> {
   handleNavigation() async {
     final currUser = FirebaseAuth.instance.currentUser;
     if (currUser != null) {
-      print('not null');
+      _navigationService.navigateTo(RoutePath.Dashboard);
     } else{
-      print('null');
+      _navigationService.navigateTo(RoutePath.Login);
     }
   }
 
