@@ -1,9 +1,10 @@
 import './App.css';
+import HoverTable from './Components/HoverTable';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <HoverTable />
     </div>
   );
 }
