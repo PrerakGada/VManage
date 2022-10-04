@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Auth/Login";
 import SignUp from "./components/Auth/SignUp";
 import NoMatch from "./components/NoMatch";
+import './App.css';
 
 function App() {
   return (
