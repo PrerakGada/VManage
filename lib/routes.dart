@@ -1,4 +1,3 @@
-
 import 'package:eos_hackover3/screens/dashboard.dart';
 import 'package:eos_hackover3/screens/edit_profile_screen.dart';
 import 'package:eos_hackover3/screens/explore_screen.dart';
@@ -6,9 +5,8 @@ import 'package:eos_hackover3/screens/newEvent_screen.dart';
 import 'package:eos_hackover3/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'screens/login_screen.dart';
+import 'screens/signUp_screen.dart';
 import 'screens/wrapper.dart';
-
 
 class RoutePath {
   static const String Wrapper = '/wrapper';
@@ -27,15 +25,12 @@ class RoutePath {
   static const String AddPost = '/AddPost';
   static const String Notifications = '/Notifications';
 
-
   static const String ViewProfile = '/ViewProfile';
   static const String Location = '/Location';
   static const String Privacy = '/Privacy';
   static const String SubscribedFullScreen = '/SubscribedFullScreen';
   static const String Loading = '/Loading';
-
 }
-
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -49,7 +44,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const LoginScreen());
 
     case RoutePath.Dashboard:
-      return MaterialPageRoute(builder: (_) =>  Dashboard());
+      return MaterialPageRoute(builder: (_) => Dashboard());
 
     case RoutePath.Explore:
       return MaterialPageRoute(builder: (_) => const ExploreScreen());
@@ -62,7 +57,6 @@ Route<dynamic> generateRoute(RouteSettings settings) {
 
     case RoutePath.EditProfile:
       return MaterialPageRoute(builder: (_) => EditProfileScreen());
-
 
     // case RoutePath.Otp:
     //   Map<String, String> arguments = settings.arguments;
