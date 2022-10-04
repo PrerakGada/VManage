@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "639910362193",
+    "project_id": "eos-hackover3",
+    "storage_bucket": "eos-hackover3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639910362193:android:b6a8c13f11b5ac10998c70",
+        "android_client_info": {
+          "package_name": "com.prerak.eos_hackover3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "639910362193-mbg6u6hvfpikcskqunh3bj2tstb1o040.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCompa2ezQ_kwB5dgnn-QgQsDvkoXfL1H0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "639910362193-mbg6u6hvfpikcskqunh3bj2tstb1o040.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
