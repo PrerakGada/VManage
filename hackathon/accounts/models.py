@@ -23,7 +23,10 @@ class UserManager(BaseUserManager):
         if extra_fields.get('is_superuser') is not True:
             raise ValueError('Superuser must have is_superuser=True.')
         return self.create_user(email, password, **extra_fields)
-
+def user_directory_path(instance, filename):
+    # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
+    return 'user_{0}/{1}'.format(instance.user.name, filename)
+    
 class User(AbstractUser):
     username					= models.CharField(max_length=15,null=True,blank=True,default="")
     is_customer                 = models.BooleanField('customer status', default=False)
@@ -46,3 +49,47 @@ class User(AbstractUser):
     def token(self):
         token = Token.objects.get(user=User.objects.get(email=self.email))
         return token.key
+class Events(models.Model):
+	event_status                       = (('Pending', 'Pending'), ('Published', 'Published') , ('Rejected', 'Rejected') )  
+	user                               = models.ForeignKey(User, on_delete=models.CASCADE)
+	tags 							   = models.CharField(max_length=255,blank=True,null=True)
+	title                              = models.CharField(max_length=255, blank=True, null=True)
+	event_held_date                    = models.DateField(blank=True, null=True)
+	event_held_time                    = models.TimeField(blank=True, null=True)
+	details                            = models.TextField(blank=True, null=True)
+	#event_details_delta                           = models.TextField(blank=True, null=True)
+	create_date                        = models.DateField(auto_now_add=True)
+	event_type                         = models.CharField(max_length=255, blank=True, null=True)
+	video_link                         = models.CharField(max_length=250, null=True, blank=True)
+	#if online
+	online_link                        = models.CharField(max_length=255, blank=True, null=True)
+	login_details                      = models.TextField(blank=True, null=True)
+
+	#if offline
+	address                             = models.TextField(blank=True, null=True)
+	pincode                             = models.CharField(max_length=70, blank=True, null=True)
+
+	event_image                         = models.ImageField(upload_to=user_directory_path, blank=True, null=True)
+
+	views                               = models.IntegerField(default=0)
+	total_report_abuse                  = models.IntegerField(default=0)
+
+	status                              = models.CharField(max_length=25, choices=event_status, blank=True)
+	 
+	######  for admin
+	review_by           = models.ForeignKey(User, on_delete=models.CASCADE,related_name="review_by_admin", blank=True, null=True )   
+	is_approve          = models.BooleanField(default=False) #
+	is_reject           = models.BooleanField(default=False) #
+	reason              = models.CharField(max_length=255, blank=True, null=True)
+	update_date         = models.DateTimeField(blank=True, null=True)
+	class Meta:
+	    ordering =['-event_held_date']
+class profile(models.Model):
+	user = models.ForeignKey(User, related_name = 'profiledetials', on_delete=models.CASCADE)
+	profile_pic = models.ImageField(null=True,blank=True)
+	points 		= models.IntegerField(null=True,blank=True)
+
+
+
+
+

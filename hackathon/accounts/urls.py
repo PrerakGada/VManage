@@ -1,7 +1,13 @@
 from django.urls import path
 from . import views
 from django.conf.urls import include
+from rest_framework import routers
+router = routers.DefaultRouter(trailing_slash=False)
+
+router.register('create-event', views.createEvent, basename='createEvent' ) 
+router.register('profile',views.profileDetails, basename='profile')
 urlpatterns = [
+	path('', include(router.urls)),
 	path('register', views.RegisterAPI.as_view(), name = 'Registration'),
 	path('login', views.LoginAPI.as_view(), name = 'Login'),
 ]

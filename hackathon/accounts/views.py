@@ -50,9 +50,38 @@ class LoginAPI(GenericAPIView):
 		return Response('Invalid Credentials',status = status.HTTP_404_NOT_FOUND)
 
 
-# class LoginAPIView(generics.GenericAPIView):
-# 	serializer_class = LoginSerializer
-# 	def post(self, request):
-# 		serializer = self.serializer_class(data=request.data)
-# 		serializer.is_valid(raise_exception=True)
-# 		return Response(serializer.data, status=status.HTTP_200_OK)
+class profileDetails(viewsets.ModelViewSet):
+	queryset = profile.objects.all()
+	serializer_class = profileSerializer
+	permission_classes = [permissions.IsAuthenticated]
+
+	def get_queryset(self):
+		return profile.objects.filter(user=self.request.user)
+	
+	def perform_create(self,serializer):
+		serializer.save(user = self.request.user)
+
+class createEvent(viewsets.ModelViewSet):
+    queryset = Events.objects.all()
+    serializer_class = createEventSerializer
+    permission_classes = (permissions.IsAuthenticated,)
+    
+    ############ public event List ####################################
+    def get_queryset(self, request):
+    	return Event.objects.filter(user=self.request.user)
+        
+        
+       
+    def create(self, request, *args, **kwargs):
+        serializer = self.serializer_class(data=request.data, context={'request': request})
+        serializer.is_valid(raise_exception=True)
+        if serializer.is_valid():
+            serializer.save(user=self.request.user)
+            
+            return Response({
+                "event": serializer.data,
+            })
+
+        else:
+            data = serializer.errors
+            return Response(data)

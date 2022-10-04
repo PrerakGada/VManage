@@ -33,3 +33,19 @@ class LoginSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['email','password','name','is_organizer','is_customer']
+
+class myuserdetails(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = '__all__'
+class profileSerializer(serializers.ModelSerializer):
+    user = myuserdetails(read_only=True)
+    class Meta:
+        model = profile
+        fields = "__all__"
+class createEventSerializer(serializers.ModelSerializer):
+    user = myuserdetails(read_only=True)
+
+    class Meta:
+        model = Events
+        fields = "__all__"

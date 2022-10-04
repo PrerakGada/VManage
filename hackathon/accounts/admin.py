@@ -31,3 +31,5 @@ class UserAdmin(UserAdmin):
     filter_horizontal = ()
 
 admin.site.register(User, UserAdmin)
+admin.site.register(Events)
+admin.site.register(profile)
