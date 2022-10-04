@@ -1,9 +1,23 @@
-import './App.css';
+import "./App.css";
+import Dashboard from "./components/Dashboard";
+import Navbar from "./components/Navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./components/Auth/Login";
+import SignUp from "./components/Auth/SignUp";
+import NoMatch from "./components/NoMatch";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <Navbar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="*" element={<NoMatch />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
