@@ -18,7 +18,7 @@ const NoMatch = () => {
                     <p>Your Request resulted in an error.</p>
                     <form className="mt-5 mb-5">
                       <div className="text-center mb-4 mt-4">
-                        <a href="index.html" className="btn btn-primary">
+                        <a href="/" className="btn btn-primary">
                           Go to Homepage
                         </a>
                       </div>
