@@ -5,6 +5,7 @@ import 'package:eos_hackover3/screens/newEvent_screen.dart';
 import 'package:eos_hackover3/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'screens/login_screen.dart';
 import 'screens/signUp_screen.dart';
 import 'screens/wrapper.dart';
 
@@ -12,6 +13,7 @@ class RoutePath {
   static const String Wrapper = '/wrapper';
   static const String Splash = '/splash';
   static const String Login = '/login';
+  static const String SignUp = '/signup';
   static const String Dashboard = '/dashboard';
 
   static const String Home = '/home';
@@ -41,19 +43,22 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     //   return MaterialPageRoute(builder: (_) => const SplashScreen());
 
     case RoutePath.Login:
-      return MaterialPageRoute(builder: (_) => const LoginScreen());
+      return MaterialPageRoute(builder: (_) =>  LoginScreen());
+
+    case RoutePath.SignUp:
+      return MaterialPageRoute(builder: (_) =>  SignUpScreen());
 
     case RoutePath.Dashboard:
       return MaterialPageRoute(builder: (_) => Dashboard());
 
     case RoutePath.Explore:
-      return MaterialPageRoute(builder: (_) => const ExploreScreen());
+      return MaterialPageRoute(builder: (_) =>  ExploreScreen());
 
     case RoutePath.NewEvent:
-      return MaterialPageRoute(builder: (_) => const NewEventScreen());
+      return MaterialPageRoute(builder: (_) =>  NewEventScreen());
 
     case RoutePath.Profile:
-      return MaterialPageRoute(builder: (_) => const ProfileScreen());
+      return MaterialPageRoute(builder: (_) =>  ProfileScreen());
 
     case RoutePath.EditProfile:
       return MaterialPageRoute(builder: (_) => EditProfileScreen());

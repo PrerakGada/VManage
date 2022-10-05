@@ -1,4 +1,5 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:eos_hackover3/Theme/app_colors.dart';
 import 'package:eos_hackover3/screens/explore_screen.dart';
 import 'package:eos_hackover3/screens/home_screen.dart';
 import 'package:eos_hackover3/screens/newEvent_screen.dart';
@@ -20,6 +21,7 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
+        physics: NeverScrollableScrollPhysics(),
         controller: _pageController,
         children: [
           HomeScreen(),
@@ -30,7 +32,7 @@ class Dashboard extends StatelessWidget {
       ),
       bottomNavigationBar: CurvedNavigationBar(
         index: 3,
-        color: Colors.red,
+        color: AppColors.primary,
         backgroundColor: Colors.transparent,
         buttonBackgroundColor: Colors.transparent,
         animationDuration: Duration(milliseconds: 100),
@@ -42,10 +44,10 @@ class Dashboard extends StatelessWidget {
           );
         },
         items: [
-          Icon(Icons.home_filled, color: Colors.black),
-          Icon(Icons.explore, color: Colors.black),
-          Icon(Icons.add, color: Colors.black),
-          Icon(Icons.account_circle, color: Colors.black),
+          Icon(Icons.home_filled, color: AppColors.white),
+          Icon(Icons.explore, color: AppColors.white),
+          Icon(Icons.add, color: AppColors.white),
+          Icon(Icons.account_circle, color: AppColors.white),
         ],
       ),
     );
