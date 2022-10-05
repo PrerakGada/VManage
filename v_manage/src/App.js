@@ -6,6 +6,11 @@ import Login from "./components/Auth/Login";
 import SignUp from "./components/Auth/SignUp";
 import NoMatch from "./components/NoMatch";
 import Footer from "./components/Footer";
+import SimpleMap from "./components/SimpleMap";
+import MarkerMap from "./components/MarkerMap";
+import VerticalChart from "./components/Dashboard/VerticalChart";
+import StackedAreaChart from "./components/Dashboard/AreaChart";
+import MoveableMap from "./components/MoveableMap";
 
 function App() {
   return (
@@ -16,6 +21,11 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/map" element={<SimpleMap />} />
+          <Route path="/marker" element={<MarkerMap />} />
+          <Route path="/vertical-chart" element={<VerticalChart />} />
+          <Route path="/area-chart" element={<StackedAreaChart />} />
+          <Route path="/move-map" element={<MoveableMap />} />
           <Route path="*" element={<NoMatch />} />
         </Routes>
       </BrowserRouter>
