@@ -53,10 +53,6 @@ function BarGraph() {
   const barColors = ["#92A3FD", "#C58BF2"];
   return (
     <div>
-      
-      <h1>
-        Monthly Active Users
-      </h1>
       <div className="chartss">
         <BarChart
           width={700}

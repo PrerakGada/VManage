@@ -8,8 +8,14 @@ const Anal = () => {
   return (
     <div>
       <Navbar />
-      {/* <AreaChart /> */}
+      <br />
+      <h1 style={{ textAlign: "center" }}>Monthly Active Users</h1>
+      <br />
       <BarGraph />
+      <br />
+      <h2 style={{ textAlign: "center" }}>
+        More Analytics Coming Soon... Stay Tuned 🔥
+      </h2>
       <Footer />
     </div>
   );
