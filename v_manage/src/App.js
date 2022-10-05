@@ -5,6 +5,12 @@ import Login from "./components/Auth/Login";
 import SignUp from "./components/Auth/SignUp";
 import NoMatch from "./components/NoMatch";
 import Profile from "./components/Profile/Profile";
+import Footer from "./components/Footer";
+import SimpleMap from "./components/SimpleMap";
+import MarkerMap from "./components/MarkerMap";
+import VerticalChart from "./components/Dashboard/VerticalChart";
+import StackedAreaChart from "./components/Dashboard/AreaChart";
+import MoveableMap from "./components/MoveableMap";
 
 function App() {
   return (
