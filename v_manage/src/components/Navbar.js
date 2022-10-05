@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import pfp from "../assets/images/pfp.png";
 
 const Navbar = () => {
   return (
@@ -46,40 +48,10 @@ const Navbar = () => {
                   className="user-img c-pointer position-relative"
                   data-toggle="dropdown"
                 >
-                  <span className="activity active"></span>
-                  <img src="images/user/1.png" height="40" width="40" alt="" />
-                </div>
-                <div className="drop-down dropdown-profile animated fadeIn dropdown-menu">
-                  <div className="dropdown-content-body">
-                    <ul>
-                      <li>
-                        <a href="app-profile.html">
-                          <i className="icon-user"></i> <span>Profile</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="icon-envelope-open"></i>
-                          <span>Inbox</span>
-                          <div className="badge gradient-3 badge-pill gradient-1">
-                            3
-                          </div>
-                        </a>
-                      </li>
-
-                      <hr className="my-2" />
-                      <li>
-                        <a href="page-lock.html">
-                          <i className="icon-lock"></i> <span>Lock Screen</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="page-login.html">
-                          <i className="icon-key"></i> <span>Logout</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  <Link to="/profile">
+                    <span className="activity active"></span>
+                    <img src={pfp} height="40" width="40" alt="" />
+                  </Link>
                 </div>
               </li>
             </ul>

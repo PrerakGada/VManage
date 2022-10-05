@@ -1,0 +1,38 @@
+.btn-danger:hover {
+    background-image: linear-gradient(230deg, #843cf6, #759bff);
+    border: none;
+}
+
+.btn-danger:focus {
+    background-image: linear-gradient(230deg, #843cf6, #759bff);
+    border: none;
+}
+
+.container-fluid .col-lg-8 {
+    margin-left: -10px;
+}
+
+.tdl-new {
+    background: #fff;
+    padding: 10px;
+    margin-top: 16px;
+    border: none;
+    height: 6vh;
+    width: 14vw;
+    font-size: 14px;
+    border: 2px solid;
+    border-radius: 4px;
+    margin-left: -10px;
+}
+
+.chartss {
+    
+}
+
+.hetviclasshetvi {
+    transform: translate(0%, -70%);
+}
+
+.footerrrrrrrrrr {
+    transform: translate(0%, -70%);
+}
