@@ -23,13 +23,13 @@ if (flutterVersionName == null) {
 
 apply plugin: 'com.android.application'
 // START: FlutterFire Configuration
-apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.gms.google-services'
 // END: FlutterFire Configuration
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion 32
     ndkVersion flutter.ndkVersion
 
     compileOptions {
@@ -50,7 +50,7 @@ android {
         applicationId "com.prerak.eos_hackover3"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
-        minSdkVersion flutter.minSdkVersion
+        minSdkVersion 30
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -63,6 +63,7 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    namespace 'com.prerak.eos_hackover3'
 }
 
 flutter {

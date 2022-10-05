@@ -52,7 +52,6 @@ class _EventsMapState extends State<EventsMap> {
       color: Colors.blue,
       width: MediaQuery.of(context).size.width * 0.9,
       height: 400,
-      //@jay write your code here:
       child: Column(
         children: [
           SizedBox(
