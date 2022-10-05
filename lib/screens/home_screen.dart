@@ -21,37 +21,42 @@ class HomeScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                Text("My Events", style: TextStyle(fontSize: 20)),
+                EventCard(
+                  imageUrl:
+                      'https://raw.githubusercontent.com/PrerakGada/43_EnemiesOfSyntax_Hackover3.0/web/v_manage/src/assets/images/navratri.jpg',
+                  title: 'Join the Jalsa',
+                  date: '07/10/2022',
+                  description: "Navratri is the \n wecwaecs erv..",
+                  price: '\₹999',
+                ),
+                Text("Events For You", style: TextStyle(fontSize: 20)),
+                EventCard(
+                  imageUrl:
+                      'https://raw.githubusercontent.com/PrerakGada/43_EnemiesOfSyntax_Hackover3.0/web/v_manage/src/assets/images/memory.jpg',
+                  title: 'Super Memory Workshop',
+                  date: '07/10/2022',
+                  description:
+                      "We at Super Mind Memory works \n wecwaecs erv..",
+                  price: '\₹599',
+                ),
+                EventCard(
+                  imageUrl:
+                      'https://raw.githubusercontent.com/PrerakGada/43_EnemiesOfSyntax_Hackover3.0/web/v_manage/src/assets/images/tughlaq.jpg',
+                  title: 'Tughlaq - A rehearsed reading',
+                  date: '08/10/2022',
+                  description:
+                      "Avchetan Theatre presents a rehearsed reading of classical \n wecwaecs erv..",
+                  price: '\₹1299',
+                ),
                 EventCard(
                   imageUrl:
                       'https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80',
                   title: 'HackOver 3.0',
-                  date: '05/10/2022',
-                  description: "Navratri is the \n wecwaecs erv..",
-                  price: '\$29',
-                ),
-                EventCard(
-                  imageUrl:
-                  'https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80',
-                  title: 'HackOver 3.0',
-                  date: '05/10/2022',
-                  description: "Navratri is the \n wecwaecs erv..",
-                  price: '\$29',
-                ),
-                EventCard(
-                  imageUrl:
-                  'https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80',
-                  title: 'HackOver 3.0',
-                  date: '05/10/2022',
-                  description: "Navratri is the \n wecwaecs erv..",
-                  price: '\$29',
-                ),
-                EventCard(
-                  imageUrl:
-                  'https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80',
-                  title: 'HackOver 3.0',
-                  date: '05/10/2022',
-                  description: "Navratri is the \n wecwaecs erv..",
-                  price: '\$29',
+                  date: '09/10/2022',
+                  description:
+                      "A 24 hour techincal hackathon that \n wecwaecs erv..",
+                  price: '\₹199',
                 ),
 
                 // (kIsWeb)
