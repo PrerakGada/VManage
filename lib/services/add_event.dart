@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'package:eos_hackover3/models/event.dart';
 import 'package:flutter/material.dart';
 import '../widgets/custom_snack_bar.dart';
 import '../widgets/http_error_handling.dart';
@@ -20,16 +21,18 @@ class AddEventService {
       const String url =
           'https://hackoverhackathon.pythonanywhere.com/accounts/create-event';
       Uri uri = Uri.parse(url);
+      Event event = Event(
+        id: '',
+        title: title,
+        details: details,
+        event_held_date: event_held_date,
+        event_held_time: event_held_time,
+        views: views,
+        event_image: event_image,
+      );
       Response response = await post(
         uri,
-        body: json.encode({
-          'title': title,
-          'details': details,
-          'event_held_date': event_held_date,
-          'event_held_time': event_held_time,
-          'views': views,
-          'event_image': event_image,
-        }),
+        body: event.toJson(),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
           'Authorization': 'Token 8f82e57ad071b83f914402e14ba89a282f218198'
