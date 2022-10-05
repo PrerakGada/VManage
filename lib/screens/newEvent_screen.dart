@@ -232,7 +232,6 @@ class _NewEventScreenState extends State<NewEventScreen> {
                   padding: EdgeInsets.all(16),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
-                    side: BorderSide(color: Colors.red),
                   ),
                   onPressed: () async {
                     try {
