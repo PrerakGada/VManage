@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
                   title: 'Join the Jalsa',
                   date: '07/10/2022',
                   description: "Navratri is the \n wecwaecs erv..",
-                  price: '\₹999',
+                  price: 'Free',
                 ),
                 Text("Events For You", style: TextStyle(fontSize: 20)),
                 EventCard(
@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                   date: '07/10/2022',
                   description:
                       "We at Super Mind Memory works \n wecwaecs erv..",
-                  price: '\₹599',
+                  price: '599',
                 ),
                 EventCard(
                   imageUrl:
@@ -52,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                   date: '08/10/2022',
                   description:
                       "Avchetan Theatre presents a rehearsed reading of classical \n wecwaecs erv..",
-                  price: '\₹1299',
+                  price: '1299',
                 ),
                 EventCard(
                   imageUrl:
@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
                   date: '09/10/2022',
                   description:
                       "A 24 hour techincal hackathon that \n wecwaecs erv..",
-                  price: '\₹199',
+                  price: '0',
                 ),
 
                 // (kIsWeb)

@@ -40,14 +40,18 @@ class EventScreen extends StatelessWidget {
                         Container(
                           padding: EdgeInsets.all(16),
                           // color: Colors.red,
-                          child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
                                 '$title',
                                 style: TextStyle(
                                     fontSize: 24, fontWeight: FontWeight.w500),
                               ),
-                              IconButton(onPressed: (){}, icon: Icon(Icons.share),),
+                              IconButton(
+                                onPressed: () {},
+                                icon: Icon(Icons.share),
+                              ),
                             ],
                           ),
                         ),
@@ -77,21 +81,23 @@ class EventScreen extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text('Price: $price'),
+                            Text('Price: \₹ $price'),
                             Text('Location: $date'),
                           ],
                         ),
                         Text('Category: $date'),
                         SingleChildScrollView(
-                           scrollDirection: Axis.horizontal,
-                          child: Row(children: [
-                            TagChip(title: 'Web/App'),
-                            TagChip(title: 'BlockChain'),
-                            TagChip(title: 'UI/UX'),
-                            TagChip(title: 'GDSC'),
-                            TagChip(title: 'Game Development'),
-                            TagChip(title: 'AI/ML'),
-                          ],),
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: [
+                              TagChip(title: 'Web/App'),
+                              TagChip(title: 'BlockChain'),
+                              TagChip(title: 'UI/UX'),
+                              TagChip(title: 'GDSC'),
+                              TagChip(title: 'Game Development'),
+                              TagChip(title: 'AI/ML'),
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -121,9 +127,40 @@ class EventScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 16),
-
-
-
+                (price == "0" || price == 'Free')
+                    ? Column(
+                        children: [
+                          MaterialButton(
+                            minWidth: MediaQuery.of(context).size.width * 0.9,
+                            color: AppColors.primary,
+                            padding: EdgeInsets.all(16),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            onPressed: () async {},
+                            child: Text(
+                              'Volunteer',
+                              style: TextStyle(
+                                  color: AppColors.white, fontSize: 18),
+                            ),
+                          ),
+                          SizedBox(height: 16),
+                        ],
+                      )
+                    : Container(),
+                MaterialButton(
+                  minWidth: MediaQuery.of(context).size.width * 0.9,
+                  color: AppColors.primary,
+                  padding: EdgeInsets.all(16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  onPressed: () async {},
+                  child: Text(
+                    'Register',
+                    style: TextStyle(color: AppColors.white, fontSize: 18),
+                  ),
+                ),
               ],
             ),
           ),
