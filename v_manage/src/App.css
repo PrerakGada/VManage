@@ -147,8 +147,6 @@ h6 {
 
 h1 {
     font-size: 2.25rem;
-    margin: 8em 0em !important;
-    padding: 4em 0em;
     font-weight: 800 !important;
 }
 
@@ -673,9 +671,7 @@ pre code {
 
 .row {
     display: flex;
-    /* flex-wrap: wrap; */
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
 }
@@ -4829,7 +4825,7 @@ input[type="button"].btn-block {
 .card {
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
     background-color: #fff;

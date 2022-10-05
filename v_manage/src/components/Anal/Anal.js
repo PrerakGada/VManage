@@ -9,11 +9,11 @@ const Anal = () => {
     <div>
       <Navbar />
       <br />
-      <h1 style={{ textAlign: "center" }}>Monthly Active Users</h1>
+      <h1 style={{ textAlign: "center", margin: 0 }}>Monthly Active Users</h1>
       <br />
       <BarGraph />
       <br />
-      <h2 style={{ textAlign: "center" }}>
+      <h2 style={{ textAlign: "center", margin: 0 }}>
         More Analytics Coming Soon... Stay Tuned 🔥
       </h2>
       <Footer />

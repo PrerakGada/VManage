@@ -1,5 +1,5 @@
 import "./Profile.css";
-import pfp from "../../../assets/images/pfp.png";
+import pfp from "../../../assets/images/face-8.png";
 import Navbar from "../../Navbar";
 import Footer from "../../Footer";
 
@@ -23,7 +23,7 @@ function Profile() {
                       alt=""
                     />
                     <div className="media-body">
-                      <h3 className="mb-0">Jay Jain</h3>
+                      <h3 className="mb-0">John Doe</h3>
                       <p className="text-muted mb-0">Mumbai, India</p>
                     </div>
                   </div>
@@ -50,7 +50,7 @@ function Profile() {
                   </div>
                   <h4>About Me</h4>
                   <p className="text-muted">
-                    Hi, I'm Jay Jain. Working as a developer
+                    Hi, I'm John Doe. Working as a developer
                   </p>
                   <ul className="card-profile__info">
                     <li className="mb-1">
