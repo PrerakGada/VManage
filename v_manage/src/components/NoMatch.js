@@ -38,7 +38,7 @@ const NoMatch = () => {
                       <ul className="list-inline">
                         <li className="list-inline-item">
                           <a
-                            href="javascript:void()"
+                            href="#()"
                             className="btn btn-facebook"
                           >
                             <i className="fa fa-facebook"></i>
@@ -46,7 +46,7 @@ const NoMatch = () => {
                         </li>
                         <li className="list-inline-item">
                           <a
-                            href="javascript:void()"
+                            href="#()"
                             className="btn btn-twitter"
                           >
                             <i className="fa fa-twitter"></i>
@@ -54,7 +54,7 @@ const NoMatch = () => {
                         </li>
                         <li className="list-inline-item">
                           <a
-                            href="javascript:void()"
+                            href="#()"
                             className="btn btn-linkedin"
                           >
                             <i className="fa fa-linkedin"></i>
@@ -62,7 +62,7 @@ const NoMatch = () => {
                         </li>
                         <li className="list-inline-item">
                           <a
-                            href="javascript:void()"
+                            href="#()"
                             className="btn btn-google-plus"
                           >
                             <i className="fa fa-google-plus"></i>

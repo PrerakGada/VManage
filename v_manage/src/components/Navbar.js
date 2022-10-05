@@ -25,8 +25,8 @@ const Navbar = () => {
               <input
                 type="search"
                 className="form-control"
-                placeholder="Search Dashboard"
-                aria-label="Search Dashboard"
+                placeholder="Search for Events"
+                aria-label="Search for Events"
               />
               <div className="drop-down animated flipInX d-md-none">
                 <form action="#">
@@ -58,7 +58,7 @@ const Navbar = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="javascript:void()">
+                        <a href="#">
                           <i className="icon-envelope-open"></i>
                           <span>Inbox</span>
                           <div className="badge gradient-3 badge-pill gradient-1">

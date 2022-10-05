@@ -1,11 +1,11 @@
 import "./App.css";
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./components/Dashboard/Dashboard";
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Auth/Login";
 import SignUp from "./components/Auth/SignUp";
 import NoMatch from "./components/NoMatch";
-import './App.css';
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
           <Route path="*" element={<NoMatch />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }

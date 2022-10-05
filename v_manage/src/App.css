@@ -1,3 +1,7 @@
+body {
+    margin: 10px;
+}
+
 .gradient-1,
 .dropdown-mega-menu .ext-link.link-1 a,
 .morris-hover,
@@ -10999,6 +11003,7 @@ body {
     box-sizing: border-box;
     position: relative;
     max-width: 100%;
+    margin: 0px 20px;
 }
 
 #main-wrapper {
@@ -11513,7 +11518,7 @@ sub {
     position: relative;
     padding: 0 0.9375rem;
     background: #fff;
-    margin-left: 15.1875rem;
+/*     margin-left: 15.1875rem; */
     transition: all .2s ease;
 }
 

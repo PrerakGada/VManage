@@ -20,30 +20,30 @@ function HoverTable() {
           <tbody>
             <tr>
               <th>1</th>
-              <td>Kolor Tea Shirt For Man</td>
+              <td>Sunburn Arena ft. DJ SNAKE</td>
               <td>
-                <span className="badge badge-primary px-2">Sale</span>
+                <span className="badge badge-primary px-2">Requested</span>
               </td>
-              <td>January 22</td>
-              <td className="color-primary">$21.56</td>
+              <td>October 26</td>
+              <td className="color-primary">₹999 Onwards</td>
             </tr>
             <tr>
               <th>2</th>
-              <td>Kolor Tea Shirt For Women</td>
+              <td>Kunal Kamra Live</td>
               <td>
-                <span className="badge badge-danger px-2">Tax</span>
+                <span className="badge badge-danger px-2">Rejected</span>
               </td>
-              <td>January 30</td>
-              <td className="color-success">$55.32</td>
+              <td>November 30</td>
+              <td className="color-success">₹599 Onwards</td>
             </tr>
             <tr>
               <th>3</th>
-              <td>Blue Backpack For Baby</td>
+              <td>StandUp by Vipul Goyal</td>
               <td>
-                <span className="badge badge-success px-2">Extended</span>
+                <span className="badge badge-success px-2">Approved</span>
               </td>
               <td>January 25</td>
-              <td className="color-danger">$14.85</td>
+              <td className="color-danger">₹1299 Onwards</td>
             </tr>
           </tbody>
         </table>
