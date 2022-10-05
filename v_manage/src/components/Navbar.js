@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import pfp from "../assets/images/pfp.png";
+import logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   return (
@@ -10,7 +10,7 @@ const Navbar = () => {
           <div className="nav-control">
             <div className="hamburger">
               <span className="toggle-icon">
-                <i className="icon-menu"></i>
+                <img src={logo} style={{ width: "40px" }} alt="" />
               </span>
             </div>
           </div>
