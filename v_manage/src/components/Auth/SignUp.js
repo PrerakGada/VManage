@@ -50,7 +50,7 @@ const SignUp = () => {
                       Already have an account?
                       <Link to="/login">
                         <br />
-                          Sign In
+                        Sign In
                       </Link>
                     </p>
                   </div>
