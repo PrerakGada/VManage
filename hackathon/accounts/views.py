@@ -15,6 +15,8 @@ from rest_framework.generics import GenericAPIView
 from rest_framework.views import APIView
 from django.db.models import F, ExpressionWrapper, Q
 from rest_framework import status,permissions
+from rest_framework.generics import ListAPIView
+
 class RegisterAPI(GenericAPIView):
 	
 	serializer_class = RegisterSerializer
@@ -86,6 +88,16 @@ class createEvent(viewsets.ModelViewSet):
             data = serializer.errors
             return Response(data)
 
+class Alleventsview(ListAPIView):
+	queryset = Events.objects.all()
+	serializer_class = createEventSerializer
+	permission_classes = (permissions.IsAuthenticated,)
+	def get_queryset(self):
+		event =  Events.objects.filter(Q(status='Pending'))
+		print(event)
+		#serializer = createEventSerializer(event,read_only=True).data
+		return event
+
 class createdocumentsubmit(viewsets.ModelViewSet):
 	queryset = Documents.objects.all()
 	serializer_class = DocumentSerializer
@@ -97,3 +109,9 @@ class createdocumentsubmit(viewsets.ModelViewSet):
 
 	def perform_create(self,serializer):
 		serializer.save(user = self.request.user)
+
+class createEventEnrolled(viewsets.ModelViewSet):
+    queryset = Enrolled_Event.objects.all()
+    serializer_class = createEventEnrolledSerializer
+    permission_classes = (permissions.IsAuthenticated,)
+

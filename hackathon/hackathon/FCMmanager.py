@@ -26,5 +26,3 @@ def sendPush(title, msg, registration_token, dataObject=None):
     # Response is a message ID string.
     print('Successfully sent message:', response)
 
-
-UhNo9BaT27ZCXVhh79Zx19CJO1o1

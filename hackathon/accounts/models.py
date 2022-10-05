@@ -99,6 +99,11 @@ class Documents(models.Model):
 	is_verified = models.BooleanField(default=False)
 	is_reject = models.BooleanField(default=False)
 
+class Enrolled_Event(models.Model):
+    event                            = models.ForeignKey(Events,related_name="event_enrolled", on_delete=models.CASCADE)
+    event_enrolled_user              = models.ForeignKey(User, on_delete=models.CASCADE,related_name="event_enrolled_user")
+    create_date                      = models.DateTimeField(auto_now_add=True)
+
 
 
 

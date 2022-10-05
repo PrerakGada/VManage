@@ -52,7 +52,18 @@ class createEventSerializer(serializers.ModelSerializer):
 
 class DocumentSerializer(serializers.ModelSerializer):
     user = myuserdetails(read_only=True)
-    
+
     class Meta:
         model = Documents
         fields = "__all__"
+
+class createEventEnrolledSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = Enrolled_Event
+        fields = "__all__"
+    
+    def create(self,validated_data):
+
+        instance = super(createEventEnrolledSerializer, self).create(validated_data)
+        return instance
