@@ -668,7 +668,9 @@ pre code {
 
 .row {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    justify-content: space-evenly;
     margin-right: -15px;
     margin-left: -15px;
 }
@@ -4822,7 +4824,7 @@ input[type="button"].btn-block {
 .card {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     min-width: 0;
     word-wrap: break-word;
     background-color: #fff;
