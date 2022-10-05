@@ -39,22 +39,19 @@ const Navbar = () => {
                   />
                 </form>
               </div>
+              <Link to="/" className="btn">
+                <h4 style={{ margin: "10px 40px" }}>Home</h4>
+              </Link>
+              <Link to="/events" className="btn">
+                <h4 style={{ margin: "10px 40px" }}>Events</h4>
+              </Link>
+              <Link to="/organizers" className="btn">
+                <h4 style={{ margin: "10px 40px" }}>Organizers</h4>
+              </Link>
+              <Link to="/analytics" className="btn">
+                <h4 style={{ margin: "10px 40px" }}>Analytics</h4>
+              </Link>
             </div>
-          </div>
-          <div className="header-right">
-            <ul className="clearfix">
-              <li className="icons dropdown">
-                <div
-                  className="user-img c-pointer position-relative"
-                  data-toggle="dropdown"
-                >
-                  <Link to="/profile">
-                    <span className="activity active"></span>
-                    <img src={pfp} height="40" width="40" alt="" />
-                  </Link>
-                </div>
-              </li>
-            </ul>
           </div>
         </div>
       </div>

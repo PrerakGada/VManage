@@ -14,11 +14,11 @@ const MoveableMap = () => {
   return (
     <div>
       <ComposableMap projection="geoMercator">
-        <ZoomableGroup center={[0, 0]} zoom={9}>
+        <ZoomableGroup center={[0, 0]} zoom={0.80}>
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => (
-                <Geography key={geo.rsmKey} geography={geo} />
+                <Geography key={geo.rsmKey} geography={geo} fill="#9c9c9c" />
               ))
             }
           </Geographies>

@@ -1,8 +1,8 @@
 import React from "react";
 import BannerBlocks from "./BannerBlocks";
-import DataMap from "./DataMap";
-import EventCards from "./EventCards";
+import EventCards from "../Events/EventCards";
 import HoverTable from "./HoverTable";
+import VerticalChart from "./VerticalChart";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
@@ -11,9 +11,9 @@ const Dashboard = () => {
     <div>
       <Navbar />
       <BannerBlocks />
+      <VerticalChart />
       <EventCards />
       <HoverTable />
-      <DataMap />
       <Footer />
     </div>
   );

@@ -1,5 +1,5 @@
 import "./Profile.css";
-import pfp from "../../assets/images/pfp.png";
+import pfp from "../../../assets/images/pfp.png";
 import {
   BarChart,
   Bar,
@@ -10,8 +10,8 @@ import {
   Legend,
   Cell,
 } from "recharts";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+import Navbar from "../../Navbar";
+import Footer from "../../Footer";
 
 function Profile() {
   const data = [
