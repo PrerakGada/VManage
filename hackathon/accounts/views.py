@@ -115,3 +115,12 @@ class createEventEnrolled(viewsets.ModelViewSet):
     serializer_class = createEventEnrolledSerializer
     permission_classes = (permissions.IsAuthenticated,)
 
+
+class globalSearch(ListAPIView):
+	permission_classes = (permissions.IsAuthenticated,)
+
+	def get_queryset(self):
+		query = self.request.GET.get('query')
+		event =  Events.objects.filter(status="Published").filter(Q(tags__in=query)|Q(address__in=query)|Q(pincode__in=query)|Q(event_type__in=query))
+		return event
+

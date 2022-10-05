@@ -67,3 +67,4 @@ class createEventEnrolledSerializer(serializers.ModelSerializer):
 
         instance = super(createEventEnrolledSerializer, self).create(validated_data)
         return instance
+
