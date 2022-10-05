@@ -48,6 +48,7 @@ class _NewEventScreenState extends State<NewEventScreen> {
       views: _priceController.text,
       event_image: image!,
       context: context,
+
     );
   }
 
@@ -163,10 +164,12 @@ class _NewEventScreenState extends State<NewEventScreen> {
                         final TimeOfDay? picked = await showTimePicker(
                           context: context,
                           initialTime: selectedTime,
+
                         );
+                        TimeOfDayFormat x = TimeOfDayFormat.HH_colon_mm;
                         if (picked != null)
                           _timeController.text =
-                              "${picked.hour}:${picked.minute} ${picked.period.name}";
+                              "${picked.hourOfPeriod}:${picked.minute} ${picked.period.name}";
                       },
                     ),
                     LabeledTextFormField(
@@ -232,13 +235,13 @@ class _NewEventScreenState extends State<NewEventScreen> {
                     side: BorderSide(color: Colors.red),
                   ),
                   onPressed: () async {
-                    // try {
-                    //   print("Inside on Tap");
-                    //   addEvent();
-                    // } catch (e) {
-                    //   print("Inside on Tap Error");
-                    //   print(e);
-                    // }
+                    try {
+                      print("Inside on Tap");
+                      addEvent();
+                    } catch (e) {
+                      print("Inside on Tap Error");
+                      print(e);
+                    }
                     _navigationService.popAllAndNavigateTo(RoutePath.Dashboard);
                   },
                   child: Text(
