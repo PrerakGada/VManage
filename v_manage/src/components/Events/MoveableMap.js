@@ -5,6 +5,7 @@ import {
   Geography,
   ZoomableGroup,
   Marker,
+  Annotation,
 } from "react-simple-maps";
 
 const geoUrl =
@@ -14,7 +15,7 @@ const MoveableMap = () => {
   return (
     <div>
       <ComposableMap projection="geoMercator">
-        <ZoomableGroup center={[0, 0]} zoom={0.80}>
+        <ZoomableGroup center={[0, 0]} zoom={0.8}>
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => (
@@ -22,34 +23,70 @@ const MoveableMap = () => {
               ))
             }
           </Geographies>
-          <Marker coordinates={[73.5, 19]}>
-            <circle r={1} fill="#FF5533" />
+          <Marker coordinates={[72.8557, 19.1526]}>
+            <circle r={1} fill="#000" />
             <text
-              textAnchor="middle"
-            //   y={markerOffset}
-              style={{ fontFamily: "system-ui", fill: "#FF0000", fontSize: "0.3rem" }}
+              dx={-23}
+              style={{
+                fontFamily: "system-ui",
+                fill: "#010101",
+                fontSize: "0.5rem",
+              }}
             >
-                Mumbai
+              JALSA
             </text>
           </Marker>
-          <Marker coordinates={[20, 50]}>
-            <circle r={1} fill="#FF5533" />
+          <Marker coordinates={[77.1025, 28.7041]}>
+            <circle r={1} fill="#000" />
             <text
-              textAnchor="middle"
-            //   y={markerOffset}
-              style={{ fontFamily: "system-ui", fill: "#FF0000", fontSize: "0.3rem" }}
+              dy={-2}
+              //   y={markerOffset}
+              style={{
+                fontFamily: "system-ui",
+                fill: "#010101",
+                fontSize: "0.5rem",
+              }}
             >
-                Warsaw
+              Memory Workshop
             </text>
           </Marker>
-          <Marker coordinates={[-75, 40]}>
-            <circle r={1} fill="#FF5533" />
+          <Marker coordinates={[78.4867, 17.385]}>
+            <circle r={1} fill="#000" />
             <text
-              textAnchor="middle"
-            //   y={markerOffset}
-              style={{ fontFamily: "system-ui", fill: "#FF0000", fontSize: "0.3rem" }}
+              dy={-2}
+              style={{
+                fontFamily: "system-ui",
+                fill: "#010101",
+                fontSize: "0.5rem",
+              }}
             >
-                Philadelphia
+              Tughlaq
+            </text>
+          </Marker>
+          <Marker coordinates={[-74.006, 40.7128]}>
+            <circle r={1} fill="#000" />
+            <text
+              dy={-2}
+              style={{
+                fontFamily: "system-ui",
+                fill: "#010101",
+                fontSize: "0.5rem",
+              }}
+            >
+              StandUp by Vipul Goyal
+            </text>
+          </Marker>
+          <Marker coordinates={[21.0122, 52.2297]}>
+            <circle r={1} fill="#000" />
+            <text
+              dy={-2}
+              style={{
+                fontFamily: "system-ui",
+                fill: "#010101",
+                fontSize: "0.5rem",
+              }}
+            >
+              Seminar by Raj Vikramaditya
             </text>
           </Marker>
         </ZoomableGroup>

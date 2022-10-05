@@ -8,7 +8,7 @@ const Anal = () => {
   return (
     <div>
       <Navbar />
-      <AreaChart />
+      {/* <AreaChart /> */}
       <BarGraph />
       <Footer />
     </div>

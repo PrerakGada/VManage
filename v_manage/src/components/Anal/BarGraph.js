@@ -13,39 +13,50 @@ import {
 function BarGraph() {
   const data = [
     {
-      name: "Day 1 (15506)",
-      Calories: 2035,
+      name: "Jan",
+      monthlyActiveUsers: 2400,
     },
     {
-      name: "Day 2 (10544)",
-      Calories: 1786,
+      name: "Feb",
+      monthlyActiveUsers: 2300,
     },
     {
-      name: "Day 3 (9762)",
-      Calories: 1745,
+      name: "Mar",
+      monthlyActiveUsers: 2800,
     },
     {
-      name: "Day 4 (12669)",
-      Calories: 1863,
+      name: "Apr",
+      monthlyActiveUsers: 3000,
     },
     {
-      name: "Day 5 (9705)",
-      Calories: 1728,
+      name: "May",
+      monthlyActiveUsers: 2600,
     },
     {
-      name: "Day 6 10735",
-      Calories: 1797,
+      name: "Jun",
+      monthlyActiveUsers: 3200,
     },
     {
-      name: "Day 7 (9819)",
-      Calories: 1775,
+      name: "Jul",
+      monthlyActiveUsers: 3333,
+    },
+    {
+      name: "Aug",
+      monthlyActiveUsers: 3567,
+    },
+    {
+      name: "Sept",
+      monthlyActiveUsers: 4015,
     },
   ];
 
   const barColors = ["#92A3FD", "#C58BF2"];
   return (
     <div>
-      {" "}
+      
+      <h1>
+        Monthly Active Users
+      </h1>
       <div className="chartss">
         <BarChart
           width={700}
@@ -78,10 +89,10 @@ function BarGraph() {
           </defs>
           <CartesianGrid strokeDasharray="2 2" />
           <XAxis dataKey="name" />
-          <YAxis dataKey="Calories" />
+          <YAxis dataKey="monthlyActiveUsers" />
           <Tooltip />
           <Legend />
-          <Bar dataKey="Calories" radius={[20, 20, 20, 20]}>
+          <Bar dataKey="monthlyActiveUsers" radius={[20, 20, 20, 20]}>
             {data.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={barColors[index % 2]} />
             ))}

@@ -14,53 +14,74 @@ import {
 
 const data = [
   {
-    name: "Page A",
-    uv: 590,
-    pv: 800,
-    amt: 1400,
+    name: "Jan",
+    views: 1800,
+    attendees: 800,
+    registrations: 1050,
     cnt: 490
   },
   {
-    name: "Page B",
-    uv: 868,
-    pv: 967,
-    amt: 1506,
+    name: "Feb",
+    views: 1600,
+    attendees: 750,
+    registrations: 1100,
     cnt: 590
   },
   {
-    name: "Page C",
-    uv: 1397,
-    pv: 1098,
-    amt: 989,
+    name: "Mar",
+    views: 1350,
+    attendees: 500,
+    registrations: 750,
     cnt: 350
   },
   {
-    name: "Page D",
-    uv: 1480,
-    pv: 1200,
-    amt: 1228,
+    name: "Apr",
+    views: 1480,
+    attendees: 700,
+    registrations: 1100,
     cnt: 480
   },
   {
-    name: "Page E",
-    uv: 1520,
-    pv: 1108,
-    amt: 1100,
+    name: "May",
+    views: 1520,
+    attendees: 950,
+    registrations: 1300,
     cnt: 460
   },
   {
-    name: "Page F",
-    uv: 1400,
-    pv: 680,
-    amt: 1700,
+    name: "Jun",
+    views: 1800,
+    attendees: 1000,
+    registrations: 1400,
     cnt: 380
+  },
+  {
+    name: "Jul",
+    views: 1204,
+    attendees: 680,
+    registrations: 880,
+    cnt: 260
+  },
+  {
+    name: "Aug",
+    views: 1350,
+    attendees: 720,
+    registrations: 1100,
+    cnt: 260
+  },
+  {
+    name: "Sept",
+    views: 1900,
+    attendees: 1000,
+    registrations: 1600,
+    cnt: 260
   }
 ];
 
-export default function HorizontalChart() {
+const HorizontalChart = () => {
   return (
     <ComposedChart
-      width={500}
+      width={1450}
       height={400}
       data={data}
       margin={{
@@ -75,10 +96,12 @@ export default function HorizontalChart() {
       <YAxis />
       <Tooltip />
       <Legend />
-      <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
-      <Bar dataKey="pv" barSize={20} fill="#413ea0" />
-      <Line type="monotone" dataKey="uv" stroke="#ff7300" />
-      <Scatter dataKey="cnt" fill="red" />
+      <Area type="monotone" dataKey="registrations" fill="#8884d8" stroke="#8884d8" />
+      <Bar dataKey="attendees" barSize={20} fill="#413ea0" />
+      <Line type="monotone" dataKey="views" stroke="#ff7300" />
+      {/* <Scatter dataKey="cnt" fill="red" /> */}
     </ComposedChart>
   );
 }
+
+export default HorizontalChart

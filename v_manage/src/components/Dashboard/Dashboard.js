@@ -2,7 +2,7 @@ import React from "react";
 import BannerBlocks from "./BannerBlocks";
 import EventCards from "../Events/EventCards";
 import HoverTable from "./HoverTable";
-import VerticalChart from "./VerticalChart";
+import HorizontalChart from "./HorizontalChart";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
@@ -11,7 +11,7 @@ const Dashboard = () => {
     <div>
       <Navbar />
       <BannerBlocks />
-      <VerticalChart />
+      <HorizontalChart />
       <EventCards />
       <HoverTable />
       <Footer />

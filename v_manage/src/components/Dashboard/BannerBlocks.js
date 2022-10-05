@@ -3,6 +3,7 @@ import React from "react";
 const BannerBlocks = () => {
   return (
     <div>
+      <br />
       <div className="row">
         <div className="col-lg-3 col-sm-6">
           <div className="card gradient-1">

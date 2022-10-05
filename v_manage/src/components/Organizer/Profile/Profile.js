@@ -116,11 +116,11 @@ function Profile() {
                   </p>
                   <ul className="card-profile__info">
                     <li className="mb-1">
-                      <strong className="text-dark mr-4">Mobile</strong>{" "}
+                      <strong className="text-dark mr-4">Mobile</strong>
                       <span>+91 9867466628</span>
                     </li>
                     <li>
-                      <strong className="text-dark mr-4">Email</strong>{" "}
+                      <strong className="text-dark mr-4">Email</strong>
                       <span>jay4codes@gmail.com</span>
                     </li>
                   </ul>

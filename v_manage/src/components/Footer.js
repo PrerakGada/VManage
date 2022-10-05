@@ -5,7 +5,7 @@ const Footer = () => {
     <div>
       <div className="footer">
         <div className="copyright">
-          <p>
+          <p style={{ marginRight: "220px" }}>
             Copyright &copy; Designed & Developed by Team EnemiesOfSyntax 2022
           </p>
         </div>
