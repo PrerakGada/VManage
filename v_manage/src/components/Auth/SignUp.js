@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
@@ -11,7 +12,7 @@ const SignUp = () => {
                 <div className="card login-form mb-0">
                   <div className="card-body pt-5">
                     <a className="text-center" href="index.html">
-                      <h4>Rosella</h4>
+                      <h4>VManage</h4>
                     </a>
 
                     <form className="mt-5 mb-5 login-input">
@@ -39,16 +40,18 @@ const SignUp = () => {
                           required
                         />
                       </div>
-                      <button className="btn login-form__btn submit w-100">
-                        Sign in
-                      </button>
+                      <Link to="/">
+                        <button className="btn login-form__btn submit w-100">
+                          Sign Up
+                        </button>
+                      </Link>
                     </form>
                     <p className="mt-5 login-form__footer">
-                      Have account
-                      <a href="page-login.html" className="text-primary">
-                        Sign Up
-                      </a>
-                      now
+                      Already have an account?
+                      <Link to="/login">
+                        <br />
+                          Sign In
+                      </Link>
                     </p>
                   </div>
                 </div>
