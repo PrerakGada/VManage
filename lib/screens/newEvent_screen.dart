@@ -1,11 +1,13 @@
 import 'dart:io';
-
+import 'package:eos_hackover3/routes.dart';
+import 'package:eos_hackover3/services/add_event.dart';
 import 'package:eos_hackover3/widgets/LabeledTextFormField.dart';
 import 'package:eos_hackover3/widgets/location_screen.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-
 import '../Theme/app_colors.dart';
+import '../services/get_it_service.dart';
+import '../services/navigation_service.dart';
 
 class NewEventScreen extends StatefulWidget {
   NewEventScreen({Key? key}) : super(key: key);
@@ -16,16 +18,38 @@ class NewEventScreen extends StatefulWidget {
 
 class _NewEventScreenState extends State<NewEventScreen> {
   final TextEditingController _titleController = TextEditingController();
-
   final TextEditingController _descriptionController = TextEditingController();
-
   final TextEditingController _dateController = TextEditingController();
-
   final TextEditingController _timeController = TextEditingController();
-
   final TextEditingController _durationController = TextEditingController();
-
   final TextEditingController _priceController = TextEditingController();
+  final NavigationService _navigationService =
+      get_it_instance_const<NavigationService>();
+  final AddEventService _addEventService = AddEventService();
+
+  @override
+  void dispose() {
+    super.dispose();
+    _titleController.dispose();
+    _descriptionController.dispose();
+    _dateController.dispose();
+    _timeController.dispose();
+    _durationController.dispose();
+    _priceController.dispose();
+  }
+
+  void addEvent() {
+    print("Inside on Func call");
+    _addEventService.addEvent(
+      title: _titleController.text,
+      details: _descriptionController.text,
+      event_held_date: _dateController.text,
+      event_held_time: _timeController.text,
+      views: _priceController.text,
+      event_image: image!,
+      context: context,
+    );
+  }
 
   final List<String> list = ['Free', "Paid"];
   late String selectedType = 'Free';
@@ -207,7 +231,16 @@ class _NewEventScreenState extends State<NewEventScreen> {
                     borderRadius: BorderRadius.circular(8),
                     side: BorderSide(color: Colors.red),
                   ),
-                  onPressed: () {},
+                  onPressed: () async {
+                    // try {
+                    //   print("Inside on Tap");
+                    //   addEvent();
+                    // } catch (e) {
+                    //   print("Inside on Tap Error");
+                    //   print(e);
+                    // }
+                    _navigationService.popAllAndNavigateTo(RoutePath.Dashboard);
+                  },
                   child: Text(
                     'Add Event',
                     style: TextStyle(color: AppColors.black, fontSize: 18),
