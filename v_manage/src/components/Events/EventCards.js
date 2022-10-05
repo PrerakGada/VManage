@@ -10,7 +10,7 @@ const EventCards = () => {
     <div>
       <div className="row">
         <div className="col-12 m-b-30">
-          <h4 className="d-inline">Events</h4>
+          <h1 className="d-inline">Events</h1>
           <p className="text-muted">This weekend</p>
           <div className="row">
             <EventCardSingle

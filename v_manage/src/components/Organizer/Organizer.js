@@ -8,10 +8,48 @@ const Organizer = () => {
   return (
     <>
       <Navbar />
+      <h1 className="d-inline">Organizers</h1>
       <div className="row">
-        <Link to="/profile">
-          <OrganizerCard name="Jay Jain" tokens="23" />
-        </Link>
+        <div className="col-lg-3 col-sm-6">
+          <Link to="/profile">
+            <OrganizerCard name="Jay Jain" tokens="23" />
+          </Link>
+        </div>
+        <div className="col-lg-3 col-sm-6">
+          <Link to="/profile">
+            <OrganizerCard name="Jay Jain" tokens="23" />
+          </Link>
+        </div>
+        <div className="col-lg-3 col-sm-6">
+          <Link to="/profile">
+            <OrganizerCard name="Jay Jain" tokens="23" />
+          </Link>
+        </div>
+        <div className="col-lg-3 col-sm-6">
+          <Link to="/profile">
+            <OrganizerCard name="Jay Jain" tokens="23" />
+          </Link>
+        </div>
+        <div className="col-lg-3 col-sm-6">
+          <Link to="/profile">
+            <OrganizerCard name="Jay Jain" tokens="23" />
+          </Link>
+        </div>
+        <div className="col-lg-3 col-sm-6">
+          <Link to="/profile">
+            <OrganizerCard name="Jay Jain" tokens="23" />
+          </Link>
+        </div>
+        <div className="col-lg-3 col-sm-6">
+          <Link to="/profile">
+            <OrganizerCard name="Jay Jain" tokens="23" />
+          </Link>
+        </div>
+        <div className="col-lg-3 col-sm-6">
+          <Link to="/profile">
+            <OrganizerCard name="Jay Jain" tokens="23" />
+          </Link>
+        </div>
       </div>
       <Footer />
     </>

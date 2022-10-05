@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo.png";
 
 const Login = () => {
   return (
-    <div>
+    <div style={{ marginTop: "120px" }}>
       <div className="login-form-bg h-100">
         <div className="container h-100">
           <div className="row justify-content-center h-100">
@@ -11,16 +12,24 @@ const Login = () => {
               <div className="form-input-content">
                 <div className="card login-form mb-0">
                   <div className="card-body pt-5">
-                    <a className="text-center" href="index.html">
-                      <h4>VManage</h4>
-                    </a>
-
+                    <img
+                      src={logo}
+                      alt="logo"
+                      style={{
+                        width: "80px",
+                        margin: "-20px 200px 40px 200px",
+                      }}
+                    />
+                    <h4 className="text-center" style={{ fontSize: "40px" }}>
+                      VManage
+                    </h4>
                     <form className="mt-5 mb-5 login-input">
                       <div className="form-group">
                         <input
                           type="email"
                           className="form-control"
                           placeholder="Email"
+                          required
                         />
                       </div>
                       <div className="form-group">
@@ -28,6 +37,7 @@ const Login = () => {
                           type="password"
                           className="form-control"
                           placeholder="Password"
+                          required
                         />
                       </div>
                       <Link to="/">
@@ -36,13 +46,6 @@ const Login = () => {
                         </button>
                       </Link>
                     </form>
-                    <p className="mt-5 login-form__footer">
-                      Dont have an account?
-                      <Link to="/signup">
-                        <br />
-                        Sign Up
-                      </Link>
-                    </p>
                   </div>
                 </div>
               </div>
