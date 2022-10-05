@@ -35,9 +35,62 @@ class ExploreScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(height: 8),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        ExploreChip(title: 'Filters', isSelected: true),
+                        ExploreChip(title: '10km'),
+                        ExploreChip(title: '50km'),
+                        ExploreChip(title: 'Tech', isSelected: true),
+                        ExploreChip(title: 'Free'),
+                      ],
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.add),
+                  ),
+                ],
+              ),
               SizedBox(height: 16),
               EventsMap(),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ExploreChip extends StatelessWidget {
+  final bool isSelected;
+  final String title;
+
+  const ExploreChip({
+    Key? key,
+    this.isSelected = false,
+    required this.title,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 4),
+        decoration: BoxDecoration(
+          color: isSelected ? AppColors.grey : AppColors.black,
+          borderRadius: BorderRadius.circular(30),
+        ),
+        padding: EdgeInsets.all(10),
+        child: Text(
+          title,
+          style: TextStyle(
+            color: isSelected ? AppColors.white : AppColors.greyLight,
           ),
         ),
       ),
