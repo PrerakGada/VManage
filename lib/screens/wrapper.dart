@@ -30,9 +30,9 @@ class WrapperState extends State<Wrapper> {
   handleNavigation() async {
     final currUser = FirebaseAuth.instance.currentUser;
     if (currUser != null) {
-      _navigationService.popAllAndNavigateTo(RoutePath.Dashboard);
+      _navigationService.popAllAndNavigateTo(RoutePath.SignUp);
     } else{
-      _navigationService.popAllAndNavigateTo(RoutePath.Dashboard);
+      _navigationService.popAllAndNavigateTo(RoutePath.SignUp);
     }
   }
 

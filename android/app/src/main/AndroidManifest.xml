@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.prerak.">
    <application
         android:label="eos_hackover3"
         android:name="${applicationName}"
@@ -31,6 +31,6 @@
             android:value="2" />
        <meta-data
            android:name="com.google.android.geo.API_KEY"
-           android:value="AIzaSyBcw9TbLWSgAyiqNWlr5torlDqmYL2F8MY" />
+           android:value="AIzaSyCGlebgpvbgxCDvpSTx8nsvlvvNgMx6eyk" />
     </application>
 </manifest>

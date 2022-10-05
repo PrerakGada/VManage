@@ -1,9 +1,11 @@
 import 'package:eos_hackover3/routes.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:eos_hackover3/widgets/LabeledTextFormField.dart';
 import 'package:flutter/material.dart';
-import '../services/sign_up_service.dart';
+
+import '../Theme/app_colors.dart';
 import '../services/get_it_service.dart';
 import '../services/navigation_service.dart';
+import '../services/sign_up_service.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -48,12 +50,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('SignUp'),
+                Text(
+                  'Sign Up',
+                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: 24),
                 Container(
                   height: 400,
                   width: 300,
                   padding: EdgeInsets.all(16),
                   decoration: BoxDecoration(
+                    color: AppColors.grey,
                     border: Border.all(),
                     borderRadius: BorderRadius.circular(16),
                   ),
@@ -61,67 +68,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     // mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
-                        margin: EdgeInsets.symmetric(vertical: 10),
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                        decoration: BoxDecoration(
-                          // color: Colors.amber,
-                          borderRadius: BorderRadius.circular(30),
-                          border: Border.all(),
-                        ),
-                        child: TextFormField(
+                      LabeledTextFormField(
                           controller: _nameController,
-                          keyboardType: TextInputType.name,
-                          decoration: InputDecoration(
-                            hintText: 'Name',
-                            border: InputBorder.none,
-                          ),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.symmetric(vertical: 10),
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                        decoration: BoxDecoration(
-                          // color: Colors.amber,
-                          borderRadius: BorderRadius.circular(30),
-                          border: Border.all(),
-                        ),
-                        child: TextFormField(
+                          title: 'Name',
+                          hintTitle: 'Enter your name'),
+                      SizedBox(height: 16),
+                      LabeledTextFormField(
                           controller: _emailController,
-                          keyboardType: TextInputType.emailAddress,
-                          decoration: InputDecoration(
-                            hintText: 'Email',
-                            border: InputBorder.none,
-                          ),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.symmetric(vertical: 10),
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                        decoration: BoxDecoration(
-                          // color: Colors.amber,
-                          borderRadius: BorderRadius.circular(30),
-                          border: Border.all(),
-                        ),
-                        child: TextFormField(
+                          title: 'Email',
+                          hintTitle: 'Enter your email'),
+                      SizedBox(height: 16),
+                      LabeledTextFormField(
                           controller: _passwordController,
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            hintText: 'Password',
-                            border: InputBorder.none,
-                          ),
-                        ),
-                      ),
+                          title: 'Password',
+                          hintTitle: 'Enter your password'),
+                      SizedBox(height: 24),
                       MaterialButton(
-                        color: Colors.amberAccent,
-                        minWidth: 100,
+                        color: AppColors.primaryAccent,
+                        minWidth: 200,
                         padding: EdgeInsets.all(16),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
-                            Radius.circular(30),
+                            Radius.circular(8),
                           ),
                         ),
                         onPressed: () async {
@@ -139,14 +107,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             signUpUser();
                             print('func call done');
                             _navigationService
-                                .popAllAndNavigateTo(RoutePath.Dashboard);
+                                .popAllAndNavigateTo(RoutePath.Login);
                           } catch (e) {
                             print(e);
                           }
                         },
                         child: Text(
-                          'SignUp',
-                          style: TextStyle(fontSize: 18),
+                          'Sign Up',
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: AppColors.black,
+                              fontWeight: FontWeight.bold),
                         ),
                       )
                     ],

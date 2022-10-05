@@ -1,6 +1,10 @@
 import 'package:eos_hackover3/Theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
+import '../services/get_it_service.dart';
+import '../services/navigation_service.dart';
+import 'EventScreen.dart';
+
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
 
@@ -135,7 +139,7 @@ class HomeScreen extends StatelessWidget {
 }
 
 class EventCard extends StatelessWidget {
-  const EventCard({
+  EventCard({
     Key? key,
     required this.imageUrl,
     required this.title,
@@ -150,6 +154,9 @@ class EventCard extends StatelessWidget {
   final String date;
   final String price;
 
+  final NavigationService _navigationService =
+      get_it_instance_const<NavigationService>();
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -158,6 +165,11 @@ class EventCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
         clipBehavior: Clip.antiAlias,
         child: GestureDetector(
+          onTap: () {
+            // _navigationService.navigateTo(RoutePath.Event);
+            // Navigator.push(
+            //     context, MaterialPageRoute(builder: (_) => EventScreen()));
+          },
           child: Container(
             color: AppColors.black,
             // padding: EdgeInsets.all(8),
@@ -181,9 +193,12 @@ class EventCard extends StatelessWidget {
                           children: [
                             Column(
                               children: [
-                                Text(title),
-                                Text(description,
-                                    overflow: TextOverflow.ellipsis),
+                                SizedBox(width: 130, child: Text(title, overflow: TextOverflow.ellipsis)),
+                                SizedBox(
+                                  width: 110,
+                                  child: Text(description,
+                                      overflow: TextOverflow.ellipsis),
+                                ),
                               ],
                             ),
                             Column(
@@ -202,8 +217,24 @@ class EventCard extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                           ),
-                          onPressed: () {},
-                          child: Text('Register'),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => EventScreen(
+                                  imageUrl: imageUrl,
+                                  title: title,
+                                  price: price,
+                                  description: description,
+                                  date: date,
+                                ),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            'See Details',
+                            style: TextStyle(color: AppColors.black),
+                          ),
                         ),
                       ],
                     ),
