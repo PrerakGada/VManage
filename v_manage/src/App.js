@@ -11,6 +11,8 @@ import MarkerMap from "./components/MarkerMap";
 import VerticalChart from "./components/Dashboard/VerticalChart";
 import StackedAreaChart from "./components/Dashboard/AreaChart";
 import MoveableMap from "./components/MoveableMap";
+import HorizontalChart from "./components/Dashboard/HorizontalChart";
+import PieChartHover from "./components/Dashboard/PieChartHover";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path="/map" element={<SimpleMap />} />
           <Route path="/marker" element={<MarkerMap />} />
           <Route path="/vertical-chart" element={<VerticalChart />} />
+          <Route path="/horizontal-chart" element={<HorizontalChart />} />
+          <Route path="/pie-chart" element={<PieChartHover />} />
           <Route path="/area-chart" element={<StackedAreaChart />} />
           <Route path="/move-map" element={<MoveableMap />} />
           <Route path="*" element={<NoMatch />} />
