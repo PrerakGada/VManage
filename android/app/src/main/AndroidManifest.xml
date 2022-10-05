@@ -1,5 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.prerak.eos_hackover3">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
    <application
         android:label="eos_hackover3"
         android:name="${applicationName}"
@@ -30,5 +29,8 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+       <meta-data
+           android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyBcw9TbLWSgAyiqNWlr5torlDqmYL2F8MY" />
     </application>
 </manifest>

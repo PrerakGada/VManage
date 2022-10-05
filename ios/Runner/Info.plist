@@ -49,5 +49,18 @@
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
     <string>Main</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Explain why your app uses photo library</string>
+    <key>LSSupportsOpeningDocumentsInPlace</key>
+    <true/>
+    <key>UISupportsDocumentBrowser</key>
+    <true/>
+    <key>NSAppleMusicUsageDescription</key>
+    <string>Explain why your app uses music</string>
+    <key>UIBackgroundModes</key>
+    <array>
+       <string>fetch</string>
+       <string>remote-notification</string>
+    </array>
 </dict>
 </plist>
