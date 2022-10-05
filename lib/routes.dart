@@ -1,3 +1,4 @@
+import 'package:eos_hackover3/screens/EventScreen.dart';
 import 'package:eos_hackover3/screens/dashboard.dart';
 import 'package:eos_hackover3/screens/edit_profile_screen.dart';
 import 'package:eos_hackover3/screens/explore_screen.dart';
@@ -28,7 +29,7 @@ class RoutePath {
   static const String Notifications = '/Notifications';
 
   static const String ViewProfile = '/ViewProfile';
-  static const String Location = '/Location';
+  static const String Event = '/event';
   static const String Privacy = '/Privacy';
   static const String SubscribedFullScreen = '/SubscribedFullScreen';
   static const String Loading = '/Loading';
@@ -62,6 +63,9 @@ Route<dynamic> generateRoute(RouteSettings settings) {
 
     case RoutePath.EditProfile:
       return MaterialPageRoute(builder: (_) => EditProfileScreen());
+
+    // case RoutePath.Event:
+    //   return MaterialPageRoute(builder: (_) => EventScreen());
 
     // case RoutePath.Otp:
     //   Map<String, String> arguments = settings.arguments;
