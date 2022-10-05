@@ -26,7 +26,7 @@ class UserManager(BaseUserManager):
 def user_directory_path(instance, filename):
     # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
     return 'user_{0}/{1}'.format(instance.user.name, filename)
-    
+
 class User(AbstractUser):
     username					= models.CharField(max_length=15,null=True,blank=True,default="")
     is_customer                 = models.BooleanField('customer status', default=False)
@@ -88,6 +88,18 @@ class profile(models.Model):
 	user = models.ForeignKey(User, related_name = 'profiledetials', on_delete=models.CASCADE)
 	profile_pic = models.ImageField(null=True,blank=True)
 	points 		= models.IntegerField(null=True,blank=True)
+
+class Documents(models.Model):
+	user = models.ForeignKey(User,on_delete=models.CASCADE)
+	organization_background = models.CharField(max_length=255, blank=True, null=True)
+	organization_logo = models.ImageField(upload_to=user_directory_path, blank=True, null=True)
+	organiztion_paper = models.ImageField(upload_to=user_directory_path, blank=True, null=True)
+	organization_website = models.CharField(max_length=255, blank=True)
+	organization_knownfor = models.CharField(max_length=255, blank=True)
+	is_verified = models.BooleanField(default=False)
+	is_reject = models.BooleanField(default=False)
+
+
 
 
 

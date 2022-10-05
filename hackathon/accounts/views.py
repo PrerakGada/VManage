@@ -67,8 +67,8 @@ class createEvent(viewsets.ModelViewSet):
     permission_classes = (permissions.IsAuthenticated,)
     
     ############ public event List ####################################
-    def get_queryset(self, request):
-    	return Event.objects.filter(user=self.request.user)
+    def get_queryset(self):
+    	return Events.objects.filter(user=self.request.user)
         
         
        
@@ -85,3 +85,15 @@ class createEvent(viewsets.ModelViewSet):
         else:
             data = serializer.errors
             return Response(data)
+
+class createdocumentsubmit(viewsets.ModelViewSet):
+	queryset = Documents.objects.all()
+	serializer_class = DocumentSerializer
+	permission_classes=(permissions.IsAuthenticated,)
+
+	def get_queryset(self):
+		return Documents.objects.filter(user=self.request.user)
+
+
+	def perform_create(self,serializer):
+		serializer.save(user = self.request.user)

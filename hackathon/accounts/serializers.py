@@ -49,3 +49,10 @@ class createEventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Events
         fields = "__all__"
+
+class DocumentSerializer(serializers.ModelSerializer):
+    user = myuserdetails(read_only=True)
+    
+    class Meta:
+        model = Documents
+        fields = "__all__"

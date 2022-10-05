@@ -6,6 +6,7 @@ router = routers.DefaultRouter(trailing_slash=False)
 
 router.register('create-event', views.createEvent, basename='createEvent' ) 
 router.register('profile',views.profileDetails, basename='profile')
+router.register('create-documemt',views.createdocumentsubmit,basename='create')
 urlpatterns = [
 	path('', include(router.urls)),
 	path('register', views.RegisterAPI.as_view(), name = 'Registration'),

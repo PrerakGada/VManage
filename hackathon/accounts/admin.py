@@ -33,3 +33,4 @@ class UserAdmin(UserAdmin):
 admin.site.register(User, UserAdmin)
 admin.site.register(Events)
 admin.site.register(profile)
+admin.site.register(Documents)
