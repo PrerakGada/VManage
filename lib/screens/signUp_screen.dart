@@ -5,14 +5,14 @@ import '../services/sign_up_service.dart';
 import '../services/get_it_service.dart';
 import '../services/navigation_service.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({Key? key}) : super(key: key);
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
@@ -50,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 Text('SignUp'),
                 Container(
-                  height: 300,
+                  height: 400,
                   width: 300,
                   padding: EdgeInsets.all(16),
                   decoration: BoxDecoration(

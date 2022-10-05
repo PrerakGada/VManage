@@ -1,10 +1,12 @@
-import 'package:eos_hackover3/Theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 import '../services/get_it_service.dart';
 import '../services/navigation_service.dart';
+import '../widgets/LabeledTextFormField.dart';
 
 class EditProfileScreen extends StatelessWidget {
+  final TextEditingController _nameController = TextEditingController();
+
   final NavigationService _navigationService =
       get_it_instance_const<NavigationService>();
 
@@ -32,26 +34,17 @@ class EditProfileScreen extends StatelessWidget {
                 backgroundColor: Colors.amberAccent,
                 radius: 34,
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Name',style: TextStyle(color: AppColors.greyLight),),
-                  SizedBox(height: 4),
-                  Container(
-                    padding: EdgeInsets.only(left: 16),
-                    decoration: BoxDecoration(
-                      color: AppColors.black,
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: TextFormField(
-                        decoration: InputDecoration(
-                          hintText: 'Enter your name',
-                      hintStyle: Theme.of(context).textTheme.bodySmall,
-                      border: InputBorder.none,
-                    )),
-                  ),
-                ],
-              )
+              LabeledTextFormField(
+                controller: _nameController,
+                title: 'Name',
+                hintTitle: 'Enter your name',
+              ),
+              MaterialButton(
+                onPressed: () {
+                  print(_nameController.text);
+                },
+                child: Text('Save'),
+              ),
             ],
           ),
         ),
