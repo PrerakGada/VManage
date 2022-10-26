@@ -14,4 +14,5 @@ urlpatterns = [
 	path('register', views.RegisterAPI.as_view(), name = 'Registration'),
 	path('login', views.LoginAPI.as_view(), name = 'Login'),
 	path('Alleventsview',views.Alleventsview.as_view(), name = 'alleventsview'),
+	path('poll-email-cron', views.sendHTMLEmail, name='poll-email-cron'),
 ]

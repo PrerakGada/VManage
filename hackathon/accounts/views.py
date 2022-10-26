@@ -16,6 +16,8 @@ from rest_framework.views import APIView
 from django.db.models import F, ExpressionWrapper, Q
 from rest_framework import status,permissions
 from rest_framework.generics import ListAPIView
+from .utils import Util
+from rest_framework.decorators import api_view,permission_classes
 
 class RegisterAPI(GenericAPIView):
 	
@@ -124,3 +126,21 @@ class globalSearch(ListAPIView):
 		event =  Events.objects.filter(status="Published").filter(Q(tags__in=query)|Q(address__in=query)|Q(pincode__in=query)|Q(event_type__in=query))
 		return event
 
+from django.core.mail import EmailMessage
+from django.http import HttpResponse
+
+
+
+@api_view(['GET'])
+def sendHTMLEmail(request):
+   html_content = "<strong>Comment tu vas?</strong>"
+   email = EmailMessage("my subject", html_content, "deep.parekh4@svkmmumbai.onmicrosoft.com", ['joshiyash05@gmail.com'])
+   email.content_subtype = "html"
+   res = email.send()
+
+   # email_body = html_content
+   # data = {'email_body': email_body, 'to_email': 'joshiyash05@gmail.com',
+   #               'email_subject': email_body}
+
+   #Util.send_email(data)
+   return HttpResponse("Done")
